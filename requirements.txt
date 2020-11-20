@@ -1,0 +1,8 @@
+Flask
+gunicorn
+numpy
+dlib
+opencv-python
+flask_cors
+# flask_socketio
+werkzeug
