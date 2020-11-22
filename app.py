@@ -107,19 +107,19 @@ CORS(app)
 def start():
     return "start"
 
-@app.route('/test')
-def start():
-    return "test"
+# @app.route('/test')
+# def start():
+#     return "test"
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST':
-        file = request.files['file']
-        concern_degree = faceAI.learning_face(file)
-        return str(concern_degree)
+# @app.route('/upload', methods=['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         file = request.files['file']
+#         concern_degree = faceAI.learning_face(file)
+#         return str(concern_degree)
     
 
 if __name__ == '__main__':
-    app.run_server(
+    app.run(
         debug=True,
     )
