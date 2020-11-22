@@ -1,6 +1,5 @@
-Flask
 gunicorn
-numpy
-# dlib
+Flask
 opencv-python
+numpy
 flask_cors
