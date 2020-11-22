@@ -7,8 +7,6 @@ import time                     #計時用
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
-from werkzeug.utils import secure_filename
-
 class face_emotion():
     def __init__(self):
 
@@ -106,21 +104,18 @@ faceAI = face_emotion()
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def start():
-    return "start"
+# @app.route('/')
+# def start():
+#     return "start"
 
-# ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+# # ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
-    if request.method == 'POST':
-        file = request.files['file']
-        #if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-
-        concern_degree = faceAI.learning_face(file)
-        return str(concern_degree)
+# @app.route('/upload', methods=['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         file = request.files['file']
+#         concern_degree = faceAI.learning_face(file)
+#         return str(concern_degree)
     
 
 if __name__ == "__main__":
