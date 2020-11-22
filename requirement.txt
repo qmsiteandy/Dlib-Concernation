@@ -6,4 +6,3 @@ opencv-python
 flask_cors
 # flask_socketio
 werkzeug
-opencv-python-headless
