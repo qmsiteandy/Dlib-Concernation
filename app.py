@@ -108,7 +108,7 @@ def start():
     return "start"
 
 @app.route('/test')
-def start():
+def test():
     return "test"
 
 # @app.route('/upload', methods=['GET', 'POST'])
