@@ -107,13 +107,15 @@ CORS(app)
 def start():
     return "start"
 
-# ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+@app.route('/test')
+def start():
+    return "test"
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         file = request.files['file']
-        # concern_degree = faceAI.learning_face(file)
+        concern_degree = faceAI.learning_face(file)
         return str(concern_degree)
     
 
