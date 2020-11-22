@@ -5,3 +5,4 @@ opencv-python
 flask_cors
 werkzeug
 opencv-python-headless
+dlib
