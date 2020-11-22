@@ -1,4 +1,4 @@
-import dlib                     #人脸识别的库dlib
+# import dlib                     #人脸识别的库dlib
 import numpy as np              #数据处理的库numpy
 import cv2                      #图像处理的库OpenCv
 import time                     #計時用
@@ -98,24 +98,24 @@ class face_emotion():
 
         # # 删除建立的窗口
         # cv2.destroyAllWindows()  
-faceAI = face_emotion()
+# faceAI = face_emotion()
 
 
 app = Flask(__name__)
 CORS(app)
 
-# @app.route('/')
-# def start():
-#     return "start"
+@app.route('/')
+def start():
+    return "start"
 
-# # ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+# ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
-# @app.route('/upload', methods=['GET', 'POST'])
-# def upload_file():
-#     if request.method == 'POST':
-#         file = request.files['file']
-#         concern_degree = faceAI.learning_face(file)
-#         return str(concern_degree)
+@app.route('/upload', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        file = request.files['file']
+        # concern_degree = faceAI.learning_face(file)
+        return str(concern_degree)
     
 
 if __name__ == "__main__":
