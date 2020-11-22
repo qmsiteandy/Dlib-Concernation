@@ -107,9 +107,9 @@ CORS(app)
 def start():
     return "start"
 
-# @app.route('/test')
-# def start():
-#     return "test"
+@app.route('/test')
+def start():
+    return "test"
 
 # @app.route('/upload', methods=['GET', 'POST'])
 # def upload_file():
